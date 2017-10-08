@@ -1,0 +1,7 @@
+#explorer-header {
+  display: flex;
+  padding: 16px;
+  align-items: center; /* align vertical */
+  height: 42px;
+  background-color: lightslategray;
+}

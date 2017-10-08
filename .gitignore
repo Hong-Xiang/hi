@@ -42,4 +42,4 @@ testem.log
 Thumbs.db
 
 # Semantic UI
-/semantic
+/semantic/dist
