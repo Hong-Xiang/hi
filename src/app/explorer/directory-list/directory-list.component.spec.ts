@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DirectoryViewerComponent } from './directory-viewer.component';
+import { DirectoryListComponent } from './directory-list.component';
 
-describe('DirectoryViewerComponent', () => {
-  let component: DirectoryViewerComponent;
-  let fixture: ComponentFixture<DirectoryViewerComponent>;
+describe('DirectoryListComponent', () => {
+  let component: DirectoryListComponent;
+  let fixture: ComponentFixture<DirectoryListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DirectoryViewerComponent ]
+      declarations: [ DirectoryListComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DirectoryViewerComponent);
+    fixture = TestBed.createComponent(DirectoryListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

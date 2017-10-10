@@ -7,11 +7,13 @@ import { Task } from '../task.model';
   styleUrls: ['./task-item.component.css'],
   inputs: ['task'],
   outputs: ['submit', 'delete']
+
 })
 export class TaskItemComponent implements OnInit {
+  task: Task;
   submit: EventEmitter<number>;
   delete: EventEmitter<number>;
-  constructor(private task: Task) {}
+  constructor() {}
 
   ngOnInit() {}
 }

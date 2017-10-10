@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ExplorerComponent } from './explorer.component';
+import { ExplorerOpenerComponent } from './explorer-opener.component';
 
-describe('ExplorerComponent', () => {
-  let component: ExplorerComponent;
-  let fixture: ComponentFixture<ExplorerComponent>;
+describe('ExplorerOpenerComponent', () => {
+  let component: ExplorerOpenerComponent;
+  let fixture: ComponentFixture<ExplorerOpenerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ExplorerComponent ]
+      declarations: [ ExplorerOpenerComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ExplorerComponent);
+    fixture = TestBed.createComponent(ExplorerOpenerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

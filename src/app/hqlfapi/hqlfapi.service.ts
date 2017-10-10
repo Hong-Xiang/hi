@@ -3,7 +3,7 @@ import { Http } from '@angular/http';
 import { Observable } from 'rxjs';
 @Injectable()
 export class HqlfapiService {
-  base_url = 'http://10.168.3.111:5000/api/v0.2';
+  base_url = 'http://10.168.3.111:5000/api/v0.1';
   constructor(public http: Http) {}
   rGet(url: string): Observable<any> {
     return this.http.get(this.base_url + url);

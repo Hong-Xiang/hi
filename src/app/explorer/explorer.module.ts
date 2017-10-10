@@ -1,10 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DirectoryViewerComponent } from './directory-viewer/directory-viewer.component';
-import { ExplorerComponent } from './explorer.component';
+import { ExplorerMainComponent } from './explorer-main/explorer-main.component';
+import { ExplorerHeaderComponent } from './explorer-header/explorer-header.component';
+import { DirectoryListComponent } from './directory-list/directory-list.component';
+import { DirectoryListService } from './directory-list/directory-list.service';
+import { ExplorerOpenerComponent } from './explorer-opener/explorer-opener.component';
+import { DirectoryModule } from './directory/directory.module';
 @NgModule({
-  imports: [CommonModule],
-  declarations: [DirectoryViewerComponent, ExplorerComponent],
-  exports: [ExplorerComponent]
+  imports: [CommonModule, DirectoryModule],
+  declarations: [
+    ExplorerMainComponent,
+    ExplorerHeaderComponent,
+    DirectoryListComponent,
+    ExplorerOpenerComponent,
+    ExplorerMainComponent
+  ],
+  exports: [ExplorerMainComponent],
+  providers: [DirectoryListService]
 })
 export class ExplorerModule {}

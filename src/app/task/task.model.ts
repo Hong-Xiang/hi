@@ -41,6 +41,8 @@ export class Task {
     this.timeStamp.start =
       (obj && obj.timeStamp && obj.timeStamp.start) || null;
     this.timeStamp.end = (obj && obj.timeStamp && obj.timeStamp.end) || null;
+    this.state = obj.state;
+    this.data = obj.data;
   }
 }
 

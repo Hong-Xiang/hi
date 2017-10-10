@@ -3,5 +3,9 @@
   padding: 16px;
   align-items: center; /* align vertical */
   height: 42px;
-  background-color: lightslategray;
+  justify-content: space-between;
+  background-color: lightgray;
+}
+
+#explorer-header-button {
 }
