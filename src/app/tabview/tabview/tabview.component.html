@@ -1,4 +1,6 @@
-<div class="ui top attached tabular menu">
-  <div class="active item">Tab</div>
-</div>
-<app-task-main></app-task-main>
+<ul class="nav" id="tab-header">
+  <li class="nav-item" *ngFor="let t of tabs">
+    <app-tab [element]=t></app-tab>
+  </li>
+</ul>
+<app-task-main [element]=t *ngFor="let t of tabs"></app-task-main>

@@ -1,0 +1,16 @@
+.task-list {
+  max-height: 1000px;
+}
+
+.app-btn-like {
+  color: #49afd9;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+:hover.app-btn-like {
+  color: #0065ab;
+  text-decoration: none;
+  text-transform: uppercase;
+  user-select: none;
+}

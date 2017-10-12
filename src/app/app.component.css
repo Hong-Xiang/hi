@@ -1,10 +1,12 @@
-#app-explorer-main {
+#app-explorer {
   height: 1038px;
-  padding: 0px;
+  padding-right: 0px;
+  margin: 0px;
+  background-color: lightgray;
 }
 
 #app-task-main {
   height: 1038px;
   padding: 0px;
+  margin: 0px;
 }
-

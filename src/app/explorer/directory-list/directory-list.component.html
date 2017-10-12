@@ -1,5 +1,3 @@
-<div class="ui list" id="directory-list">
-  <div *ngFor="let p of roots">
-    <app-directory [path]="p" [isRoot]="true"></app-directory>
-  </div>
-</div>
+<ul class="list-unstyled" id="directory-list">
+  <app-directory *ngFor="let p of roots" [path]="p" [isRoot]="true"></app-directory>
+</ul>

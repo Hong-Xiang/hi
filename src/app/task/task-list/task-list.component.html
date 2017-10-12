@@ -1,5 +1,39 @@
-<div class="ui divided list">
+<!-- <div class="ui divided list task-list">
+
   <app-task-item class="item" *ngFor="let t of tasks | async" [task]="t">
   </app-task-item>
-</div>
+</div> -->
 <!-- <app-task-item></app-task-item> -->
+<clr-datagrid>
+  <!-- <clr-dg-placeholder>No tasks loaded yet.</clr-dg-placeholder> -->
+  <clr-dg-column [clrDgField]="'id'">ID</clr-dg-column>
+  <clr-dg-column [clrDgField]="'state'">State</clr-dg-column>
+  <clr-dg-column [clrDgField]="'workdir'">Workdir</clr-dg-column>
+  <clr-dg-column>Description</clr-dg-column>
+  <clr-dg-column>Operations</clr-dg-column>
+  <clr-dg-row *clrDgItems="let t of tasks">
+    <clr-dg-cell>
+      {{t.id}}
+    </clr-dg-cell>
+    <clr-dg-cell>{{t.state}}</clr-dg-cell>
+    <clr-dg-cell>{{t.workdir}}</clr-dg-cell>
+    <clr-dg-cell>{{t.desc}}</clr-dg-cell>
+    <clr-dg-cell>
+      <a class='app-btn-like'>submit</a>
+      <a class='app-btn-like'>delete</a>
+    </clr-dg-cell>
+  </clr-dg-row>
+  <!-- <clr-dg-row *ngIf="nbTasks>0">
+    <clr-dg-cell></clr-dg-cell>
+    <clr-dg-cell></clr-dg-cell>
+    <clr-dg-cell></clr-dg-cell>
+    <clr-dg-cell></clr-dg-cell>
+    <clr-dg-cell></clr-dg-cell>
+  </clr-dg-row> -->
+  <!-- <clr-dg-footer>{{nbTasks}} tasks</clr-dg-footer> -->
+
+  <clr-dg-footer>
+    {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}} of {{pagination.totalItems}} tasks
+    <clr-dg-pagination #pagination [clrDgPageSize]="20" [clrDgTotalItems]="tasks.length"></clr-dg-pagination>
+  </clr-dg-footer>
+</clr-datagrid>

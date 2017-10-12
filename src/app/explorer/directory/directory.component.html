@@ -2,19 +2,16 @@
   <i class="folder icon"></i>
   <div class="header">{{root.name}}</div>
 </div> -->
-<div *ngIf="root">
+<!-- <div *ngIf="root">
   <div class="ui list">
     <div class="item" (click)="expand()">
-      <!-- <div *ngIf="isRoot" class="right floated content">
-        <a><i class="close icon"></i></a>
-      </div> -->
       <i *ngIf="!expanded" class="folder icon"></i>
       <i *ngIf="expanded" class="folder open icon"></i>
       <div class="content">
         {{root.name}}
       </div>
     </div>
-    <div *ngIf="expanded">
+    <div class="item" *ngIf="expanded">
       <div class="ui list">
         <div class="item" *ngFor="let d of root.getSubDirectories()">
           <app-directory [path]="d.path" [isRoot]="false"></app-directory>
@@ -30,4 +27,21 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
+
+
+<clr-tree-node>
+  <button (click)="expand()" class="clr-treenode-link">
+    <clr-icon shape="directory"></clr-icon>
+    {{root?.name}}
+  </button>
+  <ng-template [(clrIfExpanded)]="expanded">
+    <app-directory *ngFor="let d of root.getSubDirectories()" [path]="d.path" [isRoot]="false"></app-directory>
+    <clr-tree-node *ngFor="let f of root.getFiles()">
+      <button (click)="open(f.path)" class="clr-treenode-link">
+        <clr-icon shape="file"></clr-icon>
+        {{f.name}}
+      </button>
+    </clr-tree-node>
+  </ng-template>
+</clr-tree-node>

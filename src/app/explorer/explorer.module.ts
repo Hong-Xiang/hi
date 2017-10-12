@@ -6,8 +6,9 @@ import { DirectoryListComponent } from './directory-list/directory-list.componen
 import { DirectoryListService } from './directory-list/directory-list.service';
 import { ExplorerOpenerComponent } from './explorer-opener/explorer-opener.component';
 import { DirectoryModule } from './directory/directory.module';
+import { ClarityModule } from 'clarity-angular';
 @NgModule({
-  imports: [CommonModule, DirectoryModule],
+  imports: [CommonModule, DirectoryModule, ClarityModule],
   declarations: [
     ExplorerMainComponent,
     ExplorerHeaderComponent,

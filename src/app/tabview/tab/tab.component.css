@@ -1,0 +1,20 @@
+.tab {
+  display: inline-flex;
+  background-color: black;
+  height: 42px;
+  margin: 0px;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  padding: 12px;
+}
+.tab:hover {
+  background-color: greenyellow;
+}
+.label {
+  height: 32px;
+}
+.icon {
+  height: 32px;
+  width: 10px;
+}

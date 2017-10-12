@@ -37,10 +37,10 @@ export class Task {
       end: null
     };
     this.timeStamp.create =
-      (obj && obj.timeStamp && obj.timeStamp.create) || null;
+      (obj && obj.time_stamp && obj.time_stamp.create) || null;
     this.timeStamp.start =
-      (obj && obj.timeStamp && obj.timeStamp.start) || null;
-    this.timeStamp.end = (obj && obj.timeStamp && obj.timeStamp.end) || null;
+      (obj && obj.time_stamp && obj.time_stamp.start) || null;
+    this.timeStamp.end = (obj && obj.time_stamp && obj.time_stamp.end) || null;
     this.state = obj.state;
     this.data = obj.data;
   }

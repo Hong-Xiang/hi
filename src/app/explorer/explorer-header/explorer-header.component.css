@@ -1,11 +1,15 @@
 #explorer-header {
   display: flex;
-  padding: 16px;
-  align-items: center; /* align vertical */
-  height: 42px;
-  justify-content: space-between;
-  background-color: lightgray;
+  justify-content: space-around;
+  background-color: #798893;
+  color: #c1cdd4;
+  margin: 0px;
 }
 
-#explorer-header-button {
+#explorer-header-text {
+  display: flex;
+  padding: 12px;
+  /* font-size: 120%; */
+  align-items: center; /* align vertical */
+  justify-content: space-around;
 }

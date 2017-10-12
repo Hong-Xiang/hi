@@ -26,6 +26,10 @@ export class DirectoryComponent implements OnInit {
   }
 
   expand() {
+    // if (!this.root.children)
+    //   this.service.load(this.root).subscribe((d: Directory) => {
+    //     this.root = d;
+    //   });
     this.expanded = !this.expanded;
   }
 

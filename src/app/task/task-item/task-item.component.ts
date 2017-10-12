@@ -14,6 +14,5 @@ export class TaskItemComponent implements OnInit {
   submit: EventEmitter<number>;
   delete: EventEmitter<number>;
   constructor() {}
-
   ngOnInit() {}
 }

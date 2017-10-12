@@ -5,12 +5,17 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-task-list',
   templateUrl: './task-list.component.html',
+  // changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: ['./task-list.component.css']
 })
 export class TaskListComponent implements OnInit {
-  tasks: Observable<Task[]>;
-  constructor(private taskService: TaskService) {
-    this.tasks = this.taskService.tasks;
+  tasks: Task[] = [];
+  nbTasks: number = 0;
+  constructor(private taskService: TaskService) {}
+  ngOnInit() {
+    this.taskService.tasks.subscribe((tasks: Task[]) => {
+      this.tasks = tasks;
+      this.nbTasks = tasks.length;
+    });
   }
-  ngOnInit() {}
 }
