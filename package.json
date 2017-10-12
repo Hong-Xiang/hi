@@ -24,7 +24,6 @@
     "@angular/platform-browser-dynamic": "^4.2.4",
     "@angular/router": "^4.2.4",
     "@webcomponents/custom-elements": "^1.0.0",
-    "bootstrap": "^4.0.0-beta",
     "clarity-angular": "^0.10.8",
     "clarity-icons": "^0.10.8",
     "clarity-ui": "^0.10.8",

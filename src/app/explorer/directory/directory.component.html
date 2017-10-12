@@ -35,6 +35,7 @@
     <clr-icon shape="directory"></clr-icon>
     {{root?.name}}
   </button>
+
   <ng-template [(clrIfExpanded)]="expanded">
     <app-directory *ngFor="let d of root.getSubDirectories()" [path]="d.path" [isRoot]="false"></app-directory>
     <clr-tree-node *ngFor="let f of root.getFiles()">
